@@ -1,0 +1,56 @@
+@use '../custom' as *;
+@use '../components/mixins' as *;
+.btn-rounded{
+    @include media-breakpoint-down(sm){
+        display: none;
+    }
+    position: relative;
+    padding: 0.9375rem 1.2rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid rgba($white, 0.6);
+    padding: 0.9375rem 4.375rem 0.9375rem 1.25rem;
+    background-color: $white;
+
+    span{
+        position: absolute;
+        background-color: $primary;
+        width: 2.5rem;
+        height: 2.5rem;
+        border-radius: 50%;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 5px;
+       
+        
+        i{
+            color: $white;
+            size: 1rem;
+            line-height: 2.5rem;
+        }
+    }
+    &:hover{
+        @include gradient;
+        color:$white;
+
+        span{
+            background-color: rgba($black, 0.6);
+        }
+    }
+    
+}
+
+.portFolioBtn{
+    border-radius: 5%;
+}
+
+
+.btn:focus{
+    outline: none;
+    box-shadow: none;
+  }
+ .btn-primary:focus{
+    outline: none;
+    box-shadow: none;
+ }
+

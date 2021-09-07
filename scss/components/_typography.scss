@@ -1,0 +1,70 @@
+@use '../custom' as *;
+
+.display-2{
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+    font-family: 'Poppins', sans-serif;
+
+    &--intro{
+        display: inline-block;
+        font-weight: 700;
+        font-family: 'Poppins', sans-serif;
+    }
+    &--des{
+        font-size: 1rem;
+        display: block;
+        margin-top: 1.2rem;
+        text-transform: none;
+
+        @include media-breakpoint-up(lg){
+            font-size: 1.4rem;
+            display: inline-block;
+        }
+    }
+}
+
+//HEADING LINE
+.heading-line{
+    content: "";
+    width: 10rem;
+    height: 0.1rem;
+    display: block;
+    background: $primary;
+    margin: 0 auto;
+}
+
+
+
+//DISPLAY THREE
+.display-3{
+    font-family: 'Poppins', sans-serif;
+     &--title{
+         font-size:1.2rem;
+         font-weight: 600;
+         font-family: 'Poppins', sans-serif;
+         text-transform: capitalize;
+         display: inline-block;
+         background-image: linear-gradient(to right, $primary,$secondary);
+         -webkit-background-clip: text;
+         -webkit-text-fill-color: transparent;
+         @include media-breakpoint-up(lg){
+            font-size:1.8rem;
+        }
+     }
+}
+
+//BORDER
+.border-right{
+    border-right: 0.10rem solid $primary;
+    height:100%;
+}
+
+//SERVICE DESCRPTION
+.service-text{
+    font-family: 'Poppins', sans-serif;
+}
+
+//GRADIENT CLASS
+.gradient{
+    background: linear-gradient(to right, rgba($primary, 0.95), rgba($secondary, 0.95));
+}
